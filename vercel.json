@@ -1,9 +1,17 @@
 {
-    "version": 2,
-    "builds": [
-        { "src": "run.py", "use": "@now/python" }
-    ],
-    "routes": [
-        { "src": "/(.*)", "dest": "run.py" }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "use": "@vercel/docker",
+      "options": {
+        "maxDuration": 300
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/run.py"
+    }
+  ]
 }
