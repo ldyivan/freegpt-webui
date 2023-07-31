@@ -2,10 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "use": "@vercel/docker",
-      "options": {
-        "maxDuration": 300
-      }
+      "use": "@vercel/docker"
     }
   ],
   
